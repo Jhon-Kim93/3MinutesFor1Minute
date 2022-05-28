@@ -1,65 +1,37 @@
-# Git 컨벤션
+# 3 Minutes For 1 Minute
+### 활용 기술(FE)
+- React.js, redux-toolkit, react-hook-form, react-router-dom, axios
+- styled-components, react-icons, sweetAlert2
 
-- Commit Message
+### 프로젝트 소개
+- 3M for 1M은 비대면 시대에 맞춰 효율적인 회의를 할 수 있도록 도와주는 비대면 회의 AI 솔루션입니다.
+- 우리는 비대면 재택근무의 시대가 되었음에도 여전히 화상회의방에 모여 오프라인 회의실에서 회의하던 방식 그대로 회의를 하고 있습니다.
+- 지구 반대편에 있는 사람과 협업을 해야하면 어떻게 해야할까요? 여전히 이메일로 소통하고 있지는 않나요?
+- 저희 서비스는 이러한 시대 변화에 맞춰 " 비동기식 회의 시스템 "을 제안합니다.
+- 서비스 이용 방법 
+1. 회원가입 및 로그인
+2. 그룹 생성 or 가입
+3. 회의 진행담당이 회의 및 참여자 등록
+4. 각 참여자들은 해당 의제에 관해 자신의 의견을 3분 스피치로 정리하여 음성으로 발표
+5. 녹음된 파일은 AI가 분석하여 Speech to Text 변환 및 단어 사용 빈도에 따른 워드 클라우드 제공
+6. 변환된 텍스트 수정 및 의견 정리하여 스피치로 등록
+7. 댓글로 자유로운 의견 교환
+8. 추가 회의 진행 또는 회의 종료
 
-  - 첫 글자는 대문자로 작성
-  - Feat, Fix만 해당
-    - ‘Change’, ‘Add’ 로 시작(코드 수정, 추가)
-    - 형식 : 명령어 + 수정/추가/변경사항 + 파일명
-    - ex) Feat/BE/Add : login function in main
-  - 그 외(BE/FE 구분 필요없을 시, 안붙여도 됨)
-    - ex) Rename/BE : login to sign in
-    - ex) Docs : write git, jira convention in README.md
+### 내가 맡은 역할(FE)
+- 메인페이지 UI
+- 커뮤니티 메인페이지 UI
+- 회의 등록 / 스피치 등록 UI 및 기능 구현
 
-- 명령어
+### 어려웠던 점
+- React를 처음 사용하는 점에서 Vue와 많이 달라서 어려웠다.
+- 그래도 기본적인 골조는 비슷해서 못할 정도는 아니었다.
+- Vue는 프레임워크, React는 라이브러리라고 부르는 이유를 알 것 같다. Vue는 정해진대로 코드를 작성하면 되는데(자유도가 낮음) React는 선택지를 많이 주는 느낌이다.(자유도가 높음)
+- 그래서 초보자인 내 입장에서는 사실 Vue가 사용하기 더 편했다.
+- 하지만 역시 실력있는 개발자가 되려면 React를 공부하는 게 맞는 것 같다.
 
-  - Feat : 새로운 기능 추가
-  - Fix : 버그 수정
-  - Comment : 필요한 주석 추가 및 변경
-  - Style : 코드 포맷 변경, 세미 콜론 누락, 코드 수정이 없는 경우
-  - Del : 파일 삭제
-  - Docs : 문서 수정
-  - Test : 테스트 코드, 리펙토링 테스트 코드 추가
-  - Chore : 빌드 업무 수정, 패키지 매니저 수정 - ex) .gitignore 수정
-  - Refactor : 프로덕션 코드 리팩토링, 새로운 기능이나 버그 수정 없이 현재 구현을 개선
-  - Rename : 파일 혹은 폴더명 수정
-
-- GIT add/commit/push 취소하기
-
-  참조 : https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html
-
-  - add 취소
-    - git reset HEAD : 전체 취소
-    - git reset HEAD filename : 해당 파일만 취소
-  - commit 취소
-    - git reset HEAD^ : 가장 최근 커밋 취소 + add도 취소
-    - git reset —soft HEAD^ : 가장 최근 커밋만 취소
-    - git reset —hard HEAD^ : commit, add 취소 + 만들었던 파일도 이전 커밋상태로 초기화
-    - git commit —amend : commit 메세지 수정
-  - push 취소
-    - push 취소는 팀원과의 버젼관리가 꼬일 수 있음으로 사용을 지양한다.
-    - push의 취소는 다소 복잡함으로 참조한 블로그를 참고
-
-- Git remote에 잘못 push 파일 삭제하기(.gitignore 누락한 경우)
-
-  참조 : https://gmlwjd9405.github.io/2018/05/17/git-delete-incorrect-files.html
-
-  - 간단함으로 참조한 블로그를 참고하여 실행
-
-- 알아두면 좋은 키워드
-
-  1. Rebase : branch 가지가 갈라지지 않고 merge하고 싶을 때
-  2. Amend : Commit 메시지 수정, commit 내용 수정.
-  3. Reset : 과거의 커밋으로 돌아가기(--hard옵션 사용시 저장 내용 다 날라가므로 커밋 먼저 하고, git log로 커밋 번호 알아둬야 함!!)
-  4. Stash : temp commit이 필요할 때 사용! (git checkout으로 이동할 때 매우 유용하다.) + git stash apply로 최신 저장 stash불러 올 수 있음. Or git stash list로 확인 후 불러온다.
-
-
-
-# Jira 컨벤션
-
-- Epic은 유저에게 제공하는 서비스 단위
-- Story는 기능 단위
-- Sub-task로 작은 단위로 나누어 등록
-- Jira 관리는 철저히
-- 프로젝트 관련 이슈만 작성
-
+### 배운 점
+##### redux-toolkit 사용 경험
+: 상태관리 라이브러리인 redux를 팀원 모두 처음 사용해 봤다. FE팀원 모두 redux 사용경험을 쌓고 싶었기에 context api부터 정말 속성으로 공부했던 것 같다. vuex 사용 경험이 있었기에 쉬울 줄 알았는데 생각보다 많이 달라서 어려웠다. 무결성의 원칙이 vuex에서는 따로 신경쓰지 않아도 되었는데 redux에서는 신경써줘야 한다는 점도 어렵다고 느껴졌고 mutation이 reducer라는 이름으로 바뀐 것도 처음에는 헷갈렸다. 그래도 다행히 무결성의 원칙을 알아서 지켜주는 redux-toolkit을 활용해서 조금은 나아졌지만 추가적으로 vuex에서는 사용해본적 없는 thunk 미들웨어를 적용해야 하는 부분도 이해하기 어려웠다. 그리고 toolkit을 쓰면서 slice라는 개념도 이해해야 했다.
+- redux-thunk : thunk 미들웨어는 비동기처리를 수행하도록 컴포넌트에서 받아온 데이터를 가공하여 api요청으로 보내는 역할을 한다.
+- slice : 무슨 강의를 들으면서 배운 것이 아니기에 처음에 가장 이해가 안된 포인트는 " slice가 action을 자동으로 만들어준다. "였다. 이 정보를 얻으려고 정말 구글링을 많이도 했다...ㅠㅠ 라이브러리든 프레임워크든 항상 "자동으로" 해주는 부분이 가장 어렵게 만드는 포인트인 것 같다.. (알고 나면 정말 좋지만 알기 전까진 헷갈리게 만든다..) action creator가 payload를 받는 경우엔 prepare속성을 이용하면 된다고 하는데 이번 프로젝트에서는 사용할 일이 없었던 것 같다. (SSAFY 끝나고 더 공부해보자..!)
