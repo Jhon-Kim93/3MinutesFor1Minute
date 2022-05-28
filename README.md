@@ -1,7 +1,7 @@
 # 3 Minutes For 1 Minute
 ### 활용 기술(FE)
 - React.js, redux-toolkit, react-hook-form, react-router-dom, axios
-- styled-components, react-icons, sweetAlert2
+- styled-components, react-icons, sweetAlert2, react-wordcloud
 
 ### 프로젝트 소개
 - 3M for 1M은 비대면 시대에 맞춰 효율적인 회의를 할 수 있도록 도와주는 비대면 회의 AI 솔루션입니다.
